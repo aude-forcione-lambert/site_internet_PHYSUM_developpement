@@ -63,6 +63,7 @@
 						<li><a href="#comites">Comités</a></li>
 						<li><a href="#calendrier">Calendrier</a></li>
 						<li><a href="#liens">Liens</a></li>
+						<li><a href="https://drive.google.com/drive/folders/0B7jQu73oYlfzbURveTR5TDN5N28?usp=sharing" target="_blanck">Documents</a></li>
 					</ul>
 				</div>
 			</div>
@@ -85,7 +86,7 @@
 						<p>La PHYSUM poursuit les buts suivants:</p>
 						<ul>
 							<li><p>représenter les intérêts des membres, tels que définis par l'Assemblée générale, auprès des corps professoral et administratif;</p></li>
-							<li><p>promouvoir la formation et le maintien d'un niveau de vie sociale intéressant pour les membres.</p></li>
+							<li><p>promouvoir la formation et le maintient d'un niveau de vie sociale intéressant pour les membres.</p></li>
 						</ul>
 						<p>Étant accréditée, la PHYSUM dispose du droit d'envoyer des représentants dans plusieurs comités du Département de Physique. Les membres qui nous représentent ainsi sont élus lors d'une Assemblée Générale. Nous pouvons ainsi contribuer à l'orientation et au fonctionnement du département.</p>
 					</div><!-- col-lg-6 -->
@@ -100,7 +101,7 @@
 		<div id="div1" class="container-fluid diviseur text-center">
 			<h1>VENEZ RENCONTRER NOTRE ÉQUIPE</h1>
 			<hr>
-			<p>Le conseil d'administration s'occupe du bien être des élèves. N'hésitez pas à nous contacter si vous avez besoin d'aide ou si vous avez des questions.</p>
+			<p>Le conseil d'administration s'occupe du bien être des membres. N'hésitez pas à nous contacter si vous avez besoin d'aide ou si vous avez des questions.</p>
 		</div><!-- container-fluid -->
 
 
@@ -167,7 +168,7 @@
 
 		<!-- diviseur -->
 		<div id="div2" class="container-fluid diviseur text-center">
-			<h1>NOUS POSSÉDONS L'UN DES MEILLEURS CAFÉS ÉTUDIANTS DU CAMPUS</h1>
+			<h1>NOUS POSSÉDONS LE MEILLEUR CAFÉ ÉTUDIANT DU CAMPUS</h1>
 			<hr>
 			<p>Que ce soit pour faire vos devoirs, prendre un bon repas ou simplement relaxer avec des amis, le café étudiant La Planck est votre destination privilégiée.</p>
 		</div><!-- container-fluid -->
@@ -194,7 +195,7 @@
 					</div><!-- col-sm-4 -->
 					
 					<div class="col-sm-3">
-						<p><a href="https://www.facebook.com/CafeLaPlanck" target="_blanck" class="icon icon-facebook"></a><a href="https://www.facebook.com/CafeLaPlanck"> consultez notre page Facebook</a></p>
+						<p><a href="https://www.facebook.com/CafeLaPlanck" target="_blanck" class="icon icon-facebook"></a><a href="https://www.facebook.com/CafeLaPlanck"> Visitez la page Facebook</a></p>
 					</div><!-- col-sm-4 -->
 
 				</div><!-- row -->
@@ -205,7 +206,7 @@
 					</div><!-- col-md-5 -->
 
 					<div class="col-sm-7">
-						<p>La Planck est le café étudiant du département de physique. Il est situé au local D-400 du pavillon Roger-Gaudry. Il offre une ambiance agréable pour discuter ou faire ses devoirs. De plus, sandwich, pâtisseries, café et bien plus sont servis pour satisfaire votre appétit.</p>
+						<p>La Planck est le café étudiant de physique. Il est situé au local D-400 du pavillon Roger-Gaudry. Il offre une ambiance agréable pour discuter ou faire ses devoirs. De plus, sandwich, pâtisseries, café et bien plus sont servis pour satisfaire votre appétit.</p>
 						<p>Les heures d'ouverture de La Planck sont de 8h30 à 17h30. Il est aussi possible d'être à La Planck à toute heure entre 6h et 23h: Contactez un membre du Conseil d'Administration pour savoir comment entrer si la porte est fermée. Notez que le service alimentaire n'est offert que pendant les heures d'ouvertures officielles; mais qu'un four à micro-ondes, un grille pain, et une bouilloire sont en libre-service.</p>
 					</div><!-- col-md-7 -->
 
@@ -243,7 +244,7 @@
 				<div class="row">
 					<div ng-repeat="evenement in evenements.eve">
 
-						<div class="clearfix visible-md" ng-if="$index%3==0"></div>
+						<div class="clearfix" ng-if="$index%3==0"></div>
 
 						<div class="col-md-4">
 							<div class="thumbnail">
@@ -311,17 +312,17 @@
 					<div ng-repeat="comite in comites.com">
 
 						<div class="clearfix visible-sm" ng-if="$index%2==0"></div>
-							<div class="clearfix visible-md" ng-if="$index%3==0"></div>
-								<div class="clearfix visible-lg" ng-if="$index%4==0"></div>
+						<div class="clearfix visible-md" ng-if="$index%3==0"></div>
+						<div class="clearfix visible-lg" ng-if="$index%4==0"></div>
 
-									<div class="col-sm-6 col-md-4 col-lg-3">
-										<div class="thumbnail">
-											<h2><span class="{{comite.glyph}}"></span></h2>
-											<h3>{{comite.nom}}</h3>
-											<p>{{comite.description}}</p>
-											<p><a ng-if="comite.lien!=''" href="{{comite.lien}}" target="_blank" class="btn btn-default">Voir le site</a></p>
-										</div>
-									</div><!-- col-sm-6 col-md-4 col-lg-3 -->
+						<div class="col-sm-6 col-md-4 col-lg-3">
+							<div class="thumbnail">
+								<h2><span class="{{comite.glyph}}"></span></h2>
+								<h3>{{comite.nom}}</h3>
+								<p>{{comite.description}}</p>
+								<p><a ng-if="comite.lien!=''" href="{{comite.lien}}" target="_blank" class="btn btn-default">Voir le site</a></p>
+							</div>
+						</div><!-- col-sm-6 col-md-4 col-lg-3 -->
 
 					</div><!-- ng-repeat -->
 				</div><!-- row -->
@@ -343,11 +344,13 @@
 		<div id="calendrier" class="container-fluid" ng-controller="Comites as comites">
 			<h1 class="centered">CALENDRIER</h1>
 			<hr>
+      <!-- Non Mobile Agenda -->
 			<div class="embed-responsive embed-responsive-16by9 centered visible-sm visible-md visible-lg">
-				<iframe class="embed-responsive-item" src="https://calendar.google.com/calendar/embed?src=physum.ce%40gmail.com&amp;wkst=1&amp;showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FToronto" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-			</div><!-- embed-responsive -->
+				<iframe class="embed-responsive-item" src="https://calendar.google.com/calendar/embed?src=physum.ce%40gmail.com&amp;src=uq08nu8o4uom0k3njk5i5nr3mf28fjdh%40import.calendar.google.com&amp;showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;color=%2329527A&amp;ctz=America%2FToronto" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div><!-- embed-responsive -->
+      <!-- Mobile Agenda: Only change src if needed -->
 			<div class="embed-responsive embed-responsive-16by9 centered visible-xs">
-				<iframe class="embed-responsive-item" src="https://calendar.google.com/calendar/embed?src=physum.ce%40gmail.com&amp;wkst=1&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FToronto" style="border-width:0" width="300" height="500" frameborder="0" scrolling="no"></iframe>
+        <iframe class="embed-responsive-item" src="https://calendar.google.com/calendar/embed?src=physum.ce%40gmail.com&amp;src=uq08nu8o4uom0k3njk5i5nr3mf28fjdh%40import.calendar.google.com&amp;showTitle=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;color=%2329527A&amp;ctz=America%2FToronto" style="border-width:0" width="350" height="500" frameborder="0" scrolling="no"></iframe>
 			</div><!-- embed-responsive -->
 		</div><!-- container-fluid -->
 
@@ -391,6 +394,8 @@
 			$(document).ready(function(){
 				// Add smooth scrolling to all links in navbar + footer link
 				$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+				  
+				  if(!$( this ).attr( 'href' ).match(/^#/)) return;
 
 					// Prevent default anchor click behavior
 					event.preventDefault();
